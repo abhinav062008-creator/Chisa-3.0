@@ -1,3 +1,10 @@
+// Wait for avatar states to load
+if (typeof AVATAR_STATES === 'undefined') {
+    console.error('❌ AVATAR_STATES not loaded - check file path');
+    // Show a fallback circle
+} else {
+    console.log('✅ AVATAR_STATES loaded with:', Object.keys(AVATAR_STATES));
+}
 document.addEventListener('DOMContentLoaded', () => {
     // DOM Elements
     const messagesArea = document.getElementById('messagesArea');
